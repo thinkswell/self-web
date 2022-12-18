@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/splide.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card glassy">
+        <div class="main">
+            <div class="main__img-wrapper">
+                <img src="./assets/img/me.jpg" alt="ME" class="main__img">
+            </div>
+            <div class="main__text-wrapper">
+                <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">Hello! 👋</li>
+                              <li class="splide__slide">नमस्ते। 🙏</li>
+                              <li class="splide__slide">Bonjour! 🤠</li>
+                              <li class="splide__slide">Aloha! 🤙</li>
+                              <li class="splide__slide">こんにちは (•_•)</li>
+                              <li class="splide__slide">Hola! ❤️</li>
+                              <li class="splide__slide">Ciao! 🤌</li>
+                              <li class="splide__slide">Hallo! 😯</li>
+                              <li class="splide__slide">Salve! 🤗</li>
+                          </ul>
+                    </div>
+                </div>
+                <div class="name">
+                    <span> <span class="init">I am</span> <span class="K">K</span><span>rishna</span> <span class="V">V.</span></span>
+                    <span class="init init-less">and I scrawl Ideas into Browsers.</span>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="contact">
+                <div class="line"></div>
+                <div class="tabs glassy">
+                    <div class="tab">
+                        <h4 class="tab__heading">Contact Me</h4>
+                        <p class="tab__info">
+
+                        </p>
+                    </div>
+                    <div class="tab">
+                        <h4 class="tab__heading">About Me</h4>
+                        <p class="tab__info">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work__heading">Projects</div>
+            </div>
+        </div>
+    </div>
+    <div class="beeds">
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+    </svg>
+    <canvas id="canvas"></canvas>
+    <script src="./assets/script/splide.min.js"></script>
+    <script src="./assets/script/granim.min.js"></script>
+    <script src="./assets/script/index.js"></script>
+</body>
+</html>

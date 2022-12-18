@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Pacifico&family=Unbounded&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #ff00cc;
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #333399, #ff00cc);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 85rem;
+    height: 54rem;
+    padding: 3rem;
+    position: absolute;
+    z-index: 5;
+}
+
+.main {
+    display: flex;
+}
+
+.main__img-wrapper {
+    height: 20rem;
+    width: 20rem;    
+}
+
+.main__img {
+    width: 100%;
+    height: 100%;
+    animation: goey 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 1.5rem -0.2rem rgba(0, 0, 0, 0.7);
+}
+
+.main__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-left: 3rem;
+}
+
+.splide {
+    user-select: none;
+}
+
+.splide__slide {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: 'Unbounded', cursive;
+}
+
+.init {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: -0.8rem;
+}
+
+.init-less {
+    letter-spacing: 0.2rem;
+}
+
+.name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 4.2rem;
+    font-weight: 400;
+}
+
+span.K, span.V {
+    font-size: 6.2rem;
+    font-weight: 700;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 2rem 0 0;
+}                 
+
+.line {
+    position: relative;
+    top: 0.5rem;
+    width: 28rem;
+    height: 2rem;
+    overflow: hidden;
+}
+
+.line::before {
+    content: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+    position: absolute;
+    top: -0.6rem;
+    left: 0;
+    font-size: 2rem;
+    color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-color: #fff;
+    text-decoration-line: underline;
+    animation: move 1s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.tabs {
+    flex: 1;
+    margin-top: 2rem;
+    border-radius: 0.5rem !important;
+}
+
+.work {
+    flex: 1;
+    background: firebrick;
+}
+
+#canvas {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+svg {
+    width: 0;
+    height: 0;
+}
+
+.beeds {
+    position: fixed;
+    filter:url(#goo);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+span.beed {
+    position: fixed;
+    /* background-color: black; */
+    border-radius: 50%;
+    bottom: 0%;
+    animation: wiggle 6s;
+    transform: translateY(110%) rotate(0deg);
+    background: radial-gradient(
+    circle at 75% 30%,
+    white 5px,
+    aqua 8%,
+    aqua 100%
+  );
+  box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+    inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,
+    inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateY(110%) rotate(0deg);
+        bottom: 0%;
+    }
+    100% {
+        transform: translateY(0%) rotate(90deg);
+        bottom: 100%;
+    }
+}
+
+
+
+
+.d-none {
+    display: none;
+}
+
+.glassy {
+    background: rgba(12, 0, 0, 0.11);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(12, 0, 0, 0.13);
+}
+
+@keyframes goey {
+    0% {
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    } 
+    
+    50% {
+        border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    
+    100% {
+      border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    } 
+}
+
