@@ -1,5 +1,4 @@
 document.addEventListener( 'DOMContentLoaded', function() {
-    console.log('starting!!');
     var splide = new Splide( '.splide', {
         autoplay: true,
         interval: 3000,
@@ -39,7 +38,6 @@ function generateBeeds() {
     beed.style.width = `${diameter}px`;
     beed.style.height = `${diameter}px`;
     beed.style.left = `${posX}px`;
-    console.log(diameter, posX)
 
     document.querySelector('.beeds').appendChild(beed);
     setTimeout(() => {
@@ -48,3 +46,23 @@ function generateBeeds() {
 }
 
 setInterval(generateBeeds, 500);
+
+const tabs = document.querySelectorAll('.tab');
+
+tabs.forEach((tab, idx) => {
+  tab.addEventListener('mouseover', () => {
+      tab.classList.add('tab-hover');
+      if (idx) {
+        tabs[0].classList.remove('tab-hover');
+      }
+  });
+  if (idx) {
+    tab.addEventListener('mouseout', () => {
+      console.log(idx);
+      tab.classList.remove('tab-hover');
+      if (idx) {
+        tabs[0].classList.add('tab-hover');
+      }
+    });
+  }
+})
