@@ -306,8 +306,23 @@ span.beed {
     .info {
         flex-direction: column;
     }
+    .tab {
+        height: 4.6rem;
+    }
+    .tab.tab-hover {
+        height: 22rem;
+    }
+    .tab__heading {
+        font-size: 1.8rem;
+    }
+    .tab__link, .tab__info {
+        font-size: 2rem;
+    }
     .contact {
         padding-right: 0;
+    }
+    .soon {
+        font-size: 4rem;
     }
 }
 
@@ -321,10 +336,3 @@ span.beed {
         align-self: flex-start;
     }
 }
-
-@media only screen and (max-width: 450px) {
-    html {
-        font-size: 45%;
-    }
-}
-
