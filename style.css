@@ -148,6 +148,9 @@ span.K, span.V {
     flex: 1;
     margin-top: 2rem;
     border-radius: 0.5rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tab {
@@ -156,10 +159,12 @@ span.K, span.V {
     height: 3.6rem;
     overflow: hidden;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .tab-hover {
-    height: 22rem;
+    flex: 1;
 }
 
 .tab__heading {
@@ -217,10 +222,15 @@ span.K, span.V {
     height: 100%;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 800px) {
     .card {
         width: 100%;
-        height: auto;
+        height: 100vh;
+        overflow: hidden;
+        border-radius: 0 !important;
+    }
+    .info {
+        flex-direction: column;
     }
 }
 
